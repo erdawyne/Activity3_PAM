@@ -1,9 +1,12 @@
 package com.example.sampleconstraintlayout;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -71,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
                         //dan dimasukkan kedalam bundle
                         b.putString("b", password.trim());
                         //membuat objek intent berpindah activity dari mainactivity ke Activityhasil
-                        Intent i = new Intent(getApplicationContext(), ActivityHasi.class);
+                        Intent i = new Intent(getApplicationContext(), ActivityHasil.class);
                         //Memasukkan bundle kedalam intent untuk dikirimkan ke ACtivityHasil
                         i.putExtras(b);
                         //berpindah ke ActivityHasil
@@ -94,5 +97,24 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        //Method untuk menampilkan menu.
+        getMenuInflater().inflate(R.menu.menu,menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        //Membuat kondisi jika dipilih adalah id mnDaftar
+        if (item.getItemId() == R.id.mnDaftar)
+        {
+            //Method untuk memanggil activity "Daftar Activity"
+            Intent i = new Intent(getApplicationContext(),DaftarActivity.class);
+            startActivity(i);
+        }
+        return super.onOptionsItemSelected(item);
     }
 }
