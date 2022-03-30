@@ -74,10 +74,10 @@ public class MainActivity extends AppCompatActivity {
                         //dan dimasukkan kedalam bundle
                         b.putString("b", password.trim());
                         //membuat objek intent berpindah activity dari mainactivity ke Activityhasil
-                        Intent i = new Intent(getApplicationContext(), ActivityHasil.class);
+                        Intent i = new Intent(getApplicationContext(), Home_Activity.class);
                         //Memasukkan bundle kedalam intent untuk dikirimkan ke ACtivityHasil
                         i.putExtras(b);
-                        //berpindah ke ActivityHasil
+                        //berpindah ke Home_Activity
                         startActivity(i);
                     }else{
                         //Membuat toast dan menampilkan pesan "Login Gagal"
