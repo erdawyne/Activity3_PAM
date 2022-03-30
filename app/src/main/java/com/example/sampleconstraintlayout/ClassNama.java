@@ -8,6 +8,7 @@ public class ClassNama {
     {
         this.Nama = nama;
     }
+
     //membuat method getName untuk mengembalikan nilai ke variabel nama
     public String getName() {
         return this.Nama;
