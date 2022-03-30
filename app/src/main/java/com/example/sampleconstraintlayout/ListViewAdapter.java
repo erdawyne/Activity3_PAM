@@ -19,6 +19,7 @@ public class ListViewAdapter extends BaseAdapter {
     private  ArrayList<ClassNama>arraylist;
     //Membuat konstruktor ListViewadapter
     public ListViewAdapter(Context context){
+
         //Memberi nilai mContext dengan context
         mContext =context;
         //Mengatur Layoutinflater dari context yang diberikan
